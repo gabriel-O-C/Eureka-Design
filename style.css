@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+/* GENERAL CSS SECTION */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.container{
+    max-width: 1140px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+i{
+    color: #b28756;
+    font-size: 60px;
+}
+#right-arrow{
+    position: relative;
+    animation: rightArrow 3s ease-in-out infinite;
+    behavior: smooth;
+}
+
+#left-arrow{
+    position: relative;
+    animation: leftArrow 3s ease-in-out infinite;
+}
+.button{
+    font-weight: 600;
+    color: #fff;
+    width: 250px;
+    height: 50px;
+    background-color: #b28756;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+    .button:hover{
+        font-weight: 600;
+        background-color: #fff;
+        color: #b28756;
+        border: solid 4px #b28756;
+    }
+
+.default{
+    padding: 50px 0;
+
+
+}
+    .default .section-title,
+    .default .section-description{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .default .section-title{
+        font-size: 20px;
+    }
+    .default .section-description{
+        font-size: 12px;
+        color: #ccc;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    .default .section-body{
+        margin: auto;
+        max-width: 1140px;
+    }
+    .default.light{
+        background-color: #f7f7f7;
+    }
+    .default.light .section-title{
+        color: #000;
+    }
+    .default.dark{
+        background-color: #000;
+    }
+    .default.dark .section-title{
+        color: #fff;
+    }
+/* END OF GENERAL CSS SECTION */
+
+
+/*  HEADER CSS SECTION */
+header{
+    height: 100px;
+    background-color: #000;
+  
+}
+.logo-area{
+    width: 100px;
+}
+.logo-img{
+    width: 80px;
+    height: 80px;
+    background-color: #b28756;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    line-height: 1.6em;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.menu{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 5px #000;
+    height: 100px;
+    transition: all .3s ease;
+}
+    .menu li a:hover{
+    border-bottom: solid 5px #b28756;
+    color: #c1c1c1;
+    }
+/* END OF HEADER CSS SECTION */
+
+
+/* BANNER CSS SECTION */
+.banner{
+    height: calc(100vh - 100px);
+    background-color: #ddd;
+    background-image: url('imgs/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+}
+    .banner::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.6;
+        z-index: -1;
+    }
+
+.banner .slide-area{
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.banner .slider-pointers{
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .pointer{
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 2s ease;
+    position: relative;     
+}
+
+.banner h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+}
+    .banner h1 + h1{
+        color: #b28756;
+    }
+.banner h2{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* END OF BANNER CSS SECTION */
+
+
+/* SLIDERS CSS SECTION */
+
+.sliders{
+    width: 300vw;
+    height: 100%;
+    
+}
+.slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+}
+/* END OF SLIDERS CSS SECTION */
+
+/* ABOUT US CSS SECTION */
+.section-about-us{
+    display: flex;
+}
+.section-about-us-left{
+    flex:1;
+    padding-right: 15px;
+}
+.section-about-us-right{
+    width: 500px;
+    background-image: url('imgs/foto6.jpg');
+    background-size: cover;
+    height: 300px;
+    text-align: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 5px;
+    box-shadow: 0 0 10px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+    .section-about-us-right::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+        z-index: -1;
+
+    }
+    .section-about-us-right i{
+        color: #fff;
+        cursor: pointer;
+        font-size: 65px;
+        
+    }
+    .section-about-us-right img{
+        width: 100%;
+        box-shadow: 0 0 10px #333;
+    }
+
+/* END OF ABOUT US CSS SECTION */
+
+
+/* ANIMATIONS SECTION */
+@keyframes rightArrow{
+    50%{
+        right: 8px;
+    }
+    0%{
+        right: 5px;
+    }
+}
+@keyframes leftArrow{
+    50%{
+        left: 8px;
+    }
+    0%{
+        left: 5px;
+    }
+}
+/* END OF ANIMATIONS SECTION */
